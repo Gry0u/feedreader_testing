@@ -22,17 +22,19 @@ $(function() {
 
 
         //Test that each feed has a non empty URL defined
-         it('have non empty URL', function() {
+         it('have a non empty URL', function() {
            allFeeds.forEach(function(feed) {
              expect(feed.url).toBeDefined();
            });
          });
 
 
-        /* TODO: Write a test that loops through each feed
-         * in the allFeeds object and ensures it has a name defined
-         * and that the name is not empty.
-         */
+        // Test that each feed has a non empty name defined
+         it('have a name', function() {
+           allFeeds.forEach(function(feed) {
+             expect(feed.name).toBeDefined();
+           });
+         });
     });
 
 
