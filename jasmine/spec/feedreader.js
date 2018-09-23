@@ -61,10 +61,9 @@ $(function() {
       beforeEach(function(done) {
         loadFeed(0, done);
       });
-      it('are grabbed and contain at least one entry', function(done) {
+      it('are grabbed and contain at least one entry', function() {
         const entries = document.querySelectorAll('.feed .entry');
         expect(entries.length).not.toBe(0);
-        done();
       });
 
     });
