@@ -62,7 +62,7 @@ $(function() {
         loadFeed(0, done);
       });
       it('are grabbed and contain at least one entry', function(done) {
-        const entries = document.querySelectorAll('.entry');
+        const entries = document.querySelectorAll('.feed .entry');
         expect(entries.length).not.toBe(0);
         done();
       });
