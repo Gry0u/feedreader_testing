@@ -6,7 +6,7 @@ Given a [starter](https://github.com/udacity/frontend-nanodegree-feedreader) cod
 - clone or download this repository.
 - open [index.html](./index.html) in your browser to see the tests results.
 
-## Test performed
+## Tests performed
 - The name and URL of each feed are defined and not empty.
 - The hamburger menu behaves properly: hidden by default, visibility toggled on click.
 - Some initial entries are loaded.
