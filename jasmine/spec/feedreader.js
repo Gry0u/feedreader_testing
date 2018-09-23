@@ -35,16 +35,23 @@ $(function() {
 
     describe('The menu', function() {
       let body = document.querySelector('body');
+
       //Test hiding menu by default
       it(' is hidden by default', function() {
-        expect(body.hasAttribute('class', 'menu-hidden')).toBe(true);
+        expect(body.classList.contains('menu-hidden')).toBe(true);
       });
+
       //displays when the menu icon is clicked.
       //Is hidden when clicked again
       it('has its visibility toggled by click on the menu icon', function() {
-        
-      })
+        let menuIcon = document.querySelector('.menu-icon-link');
+          //simulate click event:
+          menuIcon.click();
+          expect(body.classList.contains('menu-hidden')).toBe(false);
 
+          menuIcon.click();
+          expect(body.classList.contains('menu-hidden')).toBe(true);
+      });
     });
 
     describe('Initial Entries', function() {
