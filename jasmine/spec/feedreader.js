@@ -61,6 +61,14 @@ $(function() {
       * Remember, loadFeed() is asynchronous so this test will require
       * the use of Jasmine's beforeEach and asynchronous done() function.
       */
+      beforeEach(function(done) {
+        loadFeed(0, done);
+      });
+      it('are grabbed and contain at least one entry', function(done) {
+        const entries = document.querySelectorAll('.entry');
+        expect(entries.length).not.toBe(0);
+        done();
+      });
 
     });
 
