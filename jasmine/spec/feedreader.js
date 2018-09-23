@@ -21,14 +21,16 @@ $(function() {
          it('have a non empty URL', function() {
            allFeeds.forEach(function(feed) {
              expect(feed.url).toBeDefined();
+             expect(feed.url.length).not.toBe(0);
            });
          });
 
 
         // Test that each feed has a non empty name defined
-         it('have a name', function() {
+         it('have a non empty name', function() {
            allFeeds.forEach(function(feed) {
              expect(feed.name).toBeDefined();
+             expect(feed.name.length).not.toBe(0);
            });
          });
     });
